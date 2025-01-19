@@ -116,5 +116,5 @@ class ProjectSetup:
 
     def _copy_template(self, template_name: str, dest_path: Path):
         template_content = resources.read_text(lc_resources, template_name)
-        dest_path.write_text(template_content)
+        dest_path.write_text(template_content, encoding='utf-8')
         log(INFO, f"Updated template {template_name} to {dest_path}")
